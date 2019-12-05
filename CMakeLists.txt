@@ -2,10 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 
 project(ovpncli)
 
-#add to system env
-set(OVPN3_HOME_DIR "D:/library/openvpn3") 
-
-set(CMAKE_MODULE_PATH "${OVPN3_HOME_DIR}/cmake")
+#add to system env - $ENV{OVPN3_HOME_DIR}
+message("OVPN3_HOME_DIR - $ENV{OVPN3_HOME_DIR}")
+set(CMAKE_MODULE_PATH "$ENV{OVPN3_HOME_DIR}/cmake")
 message("CMAKE_MODULE_PATH - ${CMAKE_MODULE_PATH}")
 message("CURRENT_SOURCE_DIR - ${CMAKE_CURRENT_SOURCE_DIR}")
 include(findcoredeps)  
